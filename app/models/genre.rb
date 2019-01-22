@@ -11,6 +11,6 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    self.artists.select(:name).to_a
+    self.artists.select_values(:name)
   end
 end
